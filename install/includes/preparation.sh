@@ -1,8 +1,8 @@
-if [ ! -d ~/ml4w ] ;then
-    mkdir ~/ml4w
+if [ ! -d $my_hyprland_folder ] ;then
+    mkdir $my_hyprland_folder 
 fi
-if [ -d ~/ml4w/$version ] ;then
-    rm -rf ~/ml4w/$version
+if [ -d $my_hyprland_folder/$version ] ;then
+    rm -rf $my_hyprland_folder/$version
 fi
-cp -r dotfiles ~/ml4w/$version
-echo ":: ML4W Hyprland Starter configuration prepared in ~/ml4w/$version"
+cp -r dotfiles $my_hyprland_folder/$version
+echo ":: my-hyprland configuration prepared in ${my_hyprland_folder}/$version"
