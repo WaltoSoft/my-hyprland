@@ -111,7 +111,7 @@ clear
 # ----------------------------------------------------
 
 while getopts ":b:" opt; do
-  case "$(opt)" in
+  case "${opt}" in
     b)
       echo "Option -b was triggered, Argument: ${OPTARG}"
       install_branch="${OPTARG}"
