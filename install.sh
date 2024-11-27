@@ -15,8 +15,8 @@ version=$(cat install/version)
 # -----------------------------------------------------
 # Variables
 # -----------------------------------------------------
-my_hyprland_folder="~/.my-hyprland"
-my_hyprland_config_folder="~/.config/my-hyprland"
+my_hyprland_folder="$HOME/.my-hyprland"
+my_hyprland_config_folder="$HOME/.config/my-hyprland"
 my_hyprland_version_config_copy_folder="${my_hyprlandfolder}/${version}/.config/my-hyprland"
 
 # ----------------------------------------------------- 
