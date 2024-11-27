@@ -1,17 +1,17 @@
 {
     "custom/quicklink1": {
         "format": " ",
-        "on-click": "${my_hyprland_config_folder}/apps/ML4W_Hyprland_Settings-x86_64.AppImage",
+        "on-click": "~/.config/my-hyprland/apps/ML4W_Hyprland_Settings-x86_64.AppImage",
         "tooltip-format": "Open Hyprland Settings"
     }, 
     "custom/quicklink2": {
         "format": " ",
-        "on-click": "${my_hyprland_config_folder}/settings/browser.sh",
+        "on-click": "~/.config/my-hyprland/settings/browser.sh",
         "tooltip-format": "Open the browser"
     },
     "custom/quicklink3": {
         "format": " ",
-        "on-click": "${my_hyprland_config_folder}/settings/filemanager.sh",
+        "on-click": "~/.config/my-hyprland/settings/filemanager.sh",
         "tooltip-format": "Open the filemanager"
     }, 
     "custom/quicklinkempty": {
