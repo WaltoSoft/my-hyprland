@@ -1,4 +1,4 @@
-#!/bin/bash
+0#!/bin/bash
 
 # ----------------------------------------------------- 
 # Functions for Setup
@@ -110,10 +110,20 @@ clear
 # Get command line arguments
 # ----------------------------------------------------
 
-while getopts "b:" opt; do
+while getopts ":b:" opt; do
   case "$(opt)" in
-    b) install_branch="${OPTARG}" ;;
-    *) echo "Invalid option: -$OPTARG" >&2; exit 1 ;;
+    b)
+      echo "Option -b was triggered, Argument: ${OPTARG}"
+      install_branch="${OPTARG}"
+      ;;
+    :)
+      echo "Option -b was triggered, Argument: ${OPTARG}"
+      exit 1
+      ;;
+    ?)
+      echo "Invalid option: -${OPTARG}."
+      exit 1
+      ;;
   esac
 done
 
