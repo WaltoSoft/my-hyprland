@@ -1,4 +1,4 @@
-0#!/bin/bash
+#!/bin/bash
 
 # ----------------------------------------------------- 
 # Functions for Setup
@@ -229,13 +229,20 @@ fi
 git clone --depth 1 https://github.com/waltosoft/my-hyprland.git
 echo ":: Installation files cloned into Downloads folder"
 
+# Change into the my-hyprland folder
+cd ~/Downloads/my-hyprland
+pwd
+
 if [ ! -z $install_branch ] ;then
+  git config --get remote.origin.fetch
+  git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+  git config --get remote.origin.fetch
+  git remote update
+  git fetch
+
   git checkout $install_branch
   echo ":: Changed to ${install_branch} branch"
 fi
-
-# Change into the folder
-cd my-hyprland
 
 # Start the script
 ./install.sh
