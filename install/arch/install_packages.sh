@@ -26,10 +26,14 @@ installer_packages=(
     "libadwaita"
     "jq"
     "python-gobject"
+    "less"
+    "man-db"
+    "gnome-text-editor"
 )
 
 installer_yay=(
-    "wlogout" 
+    "wlogout"
+    "appinstalltool-bin"
 )
 
 # PLEASE NOTE: Add more packages at the end of the following command
