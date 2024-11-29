@@ -33,7 +33,7 @@ installer_packages=(
 
 installer_yay=(
     "wlogout"
-    "appinstalltool-bin"
+    "appimagetool-bin"
 )
 
 # PLEASE NOTE: Add more packages at the end of the following command
