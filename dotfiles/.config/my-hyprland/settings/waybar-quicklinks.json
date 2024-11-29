@@ -1,7 +1,7 @@
 {
     "custom/quicklink1": {
         "format": " ",
-        "on-click": "~/.config/my-hyprland/apps/ML4W_Hyprland_Settings-x86_64.AppImage",
+        "on-click": "~/.config/my-hyprland/apps/My-Hyprland-Settings-1.0.0.AppImage",
         "tooltip-format": "Open Hyprland Settings"
     }, 
     "custom/quicklink2": {
