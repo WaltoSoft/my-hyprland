@@ -13,9 +13,9 @@ if [ ! -f ~/.config/hypr/conf/input.conf ] ;then
     fi
     SEARCH="kb_layout = us"
     REPLACE="kb_layout = $keyboard_layout"
-    sed -i -e "s/$SEARCH/$REPLACE/g" ~/ml4w/$version/.config/hypr/conf/input.conf
+    sed -i -e "s/$SEARCH/$REPLACE/g" $my_hyprland_folder/$version/.config/hypr/conf/input.conf
     echo ":: Keyboard layout changed to $keyboard_layout"
     echo
 else
-    rm ~/ml4w/$version/.config/hypr/conf/input.conf
+    rm $my_hyprland_folder/$version/.config/hypr/conf/input.conf
 fi

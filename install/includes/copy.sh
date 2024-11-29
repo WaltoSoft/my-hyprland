@@ -8,10 +8,5 @@ do
 done
 
 # Copy configuration to dotfiles folder
-if [ -f ~/ml4w-excludes.txt ] ;then
-    echo ":: Exclude file for rsync found"
-    rsync -avhp -I --exclude-from=~/ml4w-excludes.txt ~/ml4w/$version/ ~/
-else
-    rsync -avhp -I ~/ml4w/$version/ ~/
-fi
+rsync -avhp -I $my_hyprland_folder/$version/ ~/
 echo ":: Dotfiles installed in ~/.config/"

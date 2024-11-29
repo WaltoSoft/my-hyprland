@@ -106,11 +106,38 @@ installer_packages_fedora=(
 
 clear
 
+# ----------------------------------------------------
+# Get command line arguments
+# ----------------------------------------------------
+
+while getopts ":b:" opt; do
+  case "${opt}" in
+    b)
+      echo "Option -b was triggered, Argument: ${OPTARG}"
+      install_branch="${OPTARG}"
+      ;;
+    :)
+      echo "Option -b was triggered, Argument: ${OPTARG}"
+      exit 1
+      ;;
+    ?)
+      echo "Invalid option: -${OPTARG}."
+      exit 1
+      ;;
+  esac
+done
+
+# ----------------------------------------------------
 # Some colors
+# ----------------------------------------------------
+
 GREEN='\033[0;32m'
 NONE='\033[0m'
 
+# ----------------------------------------------------
 # Header
+# ----------------------------------------------------
+
 echo -e "${GREEN}"
 cat <<"EOF"
  ____       _               
@@ -193,20 +220,29 @@ fi
 cd ~/Downloads
 
 # Remove existing folder
-if [ -d ~/Downloads/hyprland-starter ] ;then
-    rm -rf ~/Downloads/hyprland-starter
+if [ -d ~/Downloads/my-hyprland ] ;then
+    rm -rf ~/Downloads/my-hyprland
     echo ":: Existing installation folder removed"
 fi
 
 # Clone the packages
-git clone --depth 1 https://github.com/waltosoft/billy-hyprland.git
+git clone --depth 1 https://github.com/waltosoft/my-hyprland.git
 echo ":: Installation files cloned into Downloads folder"
 
-git checkout fix-decoration-issue
-echo ":: Changed to fix-decoration-issue branch"
+# Change into the my-hyprland folder
+cd ~/Downloads/my-hyprland
+pwd
 
-# Change into the folder
-cd billy-hyprland
+if [ ! -z $install_branch ] ;then
+  git config --get remote.origin.fetch
+  git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+  git config --get remote.origin.fetch
+  git remote update
+  git fetch
+
+  git checkout $install_branch
+  echo ":: Changed to ${install_branch} branch"
+fi
 
 # Start the script
 ./install.sh
