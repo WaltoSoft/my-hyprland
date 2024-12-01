@@ -8,7 +8,7 @@
 # by Stephan Raabe (2024) 
 # ----------------------------------------------------- 
 
-config_file=$my_hyprland_config_folder/scripts/keybindings.conf
+config_file=~/.config/my-hyprland/scripts/keybindings.conf
 echo "Reading from: $config_file"
 
 keybinds=""

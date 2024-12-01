@@ -42,7 +42,7 @@
         "format": "Apps",
         "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings",
         "on-click": "rofi -show drun -replace",
-        "on-click-right": "${my_hyprland_config_folder}/scripts/keybindings.sh",
+        "on-click-right": "$~/.config/my-hyprland/scripts/keybindings.sh",
         "tooltip": false
     },
     

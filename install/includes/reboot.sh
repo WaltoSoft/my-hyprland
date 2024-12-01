@@ -1,6 +1,5 @@
-echo -e "${GREEN}"
-figlet "Reboot"
-echo -e "${NONE}"
+clear
+_displayFiglet "Reboot"
 echo "A reboot of your system is recommended."
 echo
 if gum confirm "Do you want to reboot your system now?" ;then
@@ -15,3 +14,4 @@ else
     echo ":: Reboot skipped"
 fi
 echo ""
+echo "Installation complete"
