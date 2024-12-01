@@ -67,7 +67,7 @@ _installYay() {
 
 # Display a figlet
 _displayFiglet() {
-  if [ ! -z $1 ]; then
+  if [ ! -z "$1" ]; then
     GREEN='\033[0;32m'
     NONE='\033[0m'
     echo -e "${GREEN}"
