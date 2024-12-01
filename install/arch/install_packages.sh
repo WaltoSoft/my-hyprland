@@ -14,7 +14,7 @@ installer_packages=(
     "qt6-wayland"
     "hyprpaper"
     "hyprlock"
-    "firefox"
+    "chromium"
     "ttf-font-awesome"
     "vim"
     "fastfetch"
@@ -26,10 +26,14 @@ installer_packages=(
     "libadwaita"
     "jq"
     "python-gobject"
+    "less"
+    "man-db"
+    "gnome-text-editor"
 )
 
 installer_yay=(
-    "wlogout" 
+    "wlogout"
+    "appimagetool-bin"
 )
 
 # PLEASE NOTE: Add more packages at the end of the following command
