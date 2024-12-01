@@ -46,6 +46,10 @@ _installPackagesPacman() {
 # Packages
 # ----------------------------------------------------- 
 SETUP_INSTALLER_PACKAGES=(
+    "wget"
+    "unzip"
+    "rsync"
+    "gum"
     "figlet"
     "git"
     "less"
