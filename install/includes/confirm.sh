@@ -1,9 +1,9 @@
 INSTALL_ACTION=""
 
 if [ -d $HYPRLAND_CONFIG_FOLDER ] ;then
-    INSTALL_ACTION = "Update"
+    INSTALL_ACTION="Update"
 else
-    INSTALL_ACTION "Installation"
+    INSTALL_ACTION="Installation"
 fi
 echo -e "${NONE}"
 echo "This script will ${INSTALL_ACTION} the my-hyprland configuration."
