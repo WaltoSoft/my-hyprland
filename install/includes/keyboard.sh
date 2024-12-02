@@ -1,21 +1,10 @@
 if [ ! -f ~/.config/hypr/conf/input.conf ] ;then
-    # Setup keyboard layout
-    echo -e "${GREEN}"
-    figlet "Keyboard"
-    echo -e "${NONE}"
-    echo "Please select your keyboard layout. Can be changed later in ~/-config/hypr/hyprland.conf"
-    echo "Start typing = Search, RETURN = Confirm, CTRL-C = Cancel"
-    echo
-    keyboard_layout=$(localectl list-x11-keymap-layouts | gum filter --height 15 --placeholder "Find your keyboard layout...")
-    echo
-    if [ -z $keyboard_layout ] ;then
-        keyboard_layout="us" 
-    fi
+    keyboard_layout="us" 
     SEARCH="kb_layout = us"
     REPLACE="kb_layout = $keyboard_layout"
-    sed -i -e "s/$SEARCH/$REPLACE/g" $my_hyprland_folder/$version/.config/hypr/conf/input.conf
+    sed -i -e "s/$SEARCH/$REPLACE/g" $HYPRLAND_FOLDER/$MY_HYPRLAND_VERSION/.config/hypr/conf/input.conf
     echo ":: Keyboard layout changed to $keyboard_layout"
     echo
 else
-    rm $my_hyprland_folder/$version/.config/hypr/conf/input.conf
+    rm $HYPRLAND_FOLDER/$MY_HYPRLAND_VERSION/.config/hypr/conf/input.conf
 fi

@@ -8,5 +8,5 @@ do
 done
 
 # Copy configuration to dotfiles folder
-rsync -avhp -I $my_hyprland_folder/$version/ ~/
+rsync -avhp -I $HYPRLAND_FOLDER/$MY_HYPRLAND_VERSION/ ~/
 echo ":: Dotfiles installed in ~/.config/"

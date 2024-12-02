@@ -1,8 +1,8 @@
-if [ ! -d $my_hyprland_folder ] ;then
-    mkdir $my_hyprland_folder 
+if [ ! -d $HYPRLAND_FOLDER ] ;then
+    mkdir $HYPRLAND_FOLDER 
 fi
-if [ -d $my_hyprland_folder/$version ] ;then
-    rm -rf $my_hyprland_folder/$version
+if [ -d $HYPRLAND_FOLDER/$MY_HYPRLAND_VERSION ] ;then
+    rm -rf $HYPRLAND_FOLDER/$MY_HYPRLAND_VERSION
 fi
-cp -r dotfiles $my_hyprland_folder/$version
-echo ":: my-hyprland configuration prepared in ${my_hyprland_folder}/$version"
+cp -r dotfiles $HYPRLAND_FOLDER/$MY_HYPRLAND_VERSION
+echo ":: my-hyprland configuration prepared in ${HYPRLAND_FOLDER}/${MY_HYPRLAND_VERSION}"

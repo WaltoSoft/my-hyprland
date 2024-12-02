@@ -1,11 +1,12 @@
-echo -e "${GREEN}"
-if [ -d $my_hyprland_config_folder ] ;then
-    figlet "Update"
+INSTALL_ACTION=""
+
+if [ -d $HYPRLAND_CONFIG_FOLDER ] ;then
+    INSTALL_ACTION="Update"
 else
-    figlet "Installation"
+    INSTALL_ACTION="Installation"
 fi
 echo -e "${NONE}"
-echo "This script will install the my-hyprland configuration."
+echo "This script will ${INSTALL_ACTION} the my-hyprland configuration."
 echo "NVIDIA GPUs aren't officially supported by Hyprland. But you can give it a try..."
 echo
 if gum confirm "DO YOU WANT TO START NOW?" ;then
